@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>form</title>
+    <style>
+        body{
+            background-color:#32a894;
+            padding: 100px;
+        }
+        div{
+            padding-left: 30px;
+        }
+        div.p{
+            padding-right: 50px ;
+        }
+        #container {
+  height: 525px;
+  width: 360px;
+  margin: 100px auto;
+  background: #f7f7f7;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  padding-top: 50px;
+  font-family:'Times New Roman', Times, serif
+}
+#sub{
+    background-color:cadetblue;
+    border: none;
+
+}
+
+    </style>
+</head>
+<center>
+    <script>
+        function display(){
+            var n=document.getElementById("uname").value
+            var p=document.getElementById("pass").value 
+            var rp=document.getElementById("cpass").value
+            var ag=document.getElementById("age").value
+            if(n==""|p==""|rp==""|age==""){
+                alert("enter  all the details......")
+            }
+           
+            else if(p!=rp ){
+                alert("password not matching")
+            }
+            else if(p.length>8){
+                alert("password should be less than 8 char")
+            }
+            else if(n.length>8){
+                alert("should be less than 6")
+
+            }
+            else if(ag>99){
+                alert("age should not be greater than 99")
+            }
+            else{
+                alert("validated")
+            }
+        }
+    </script>
+<body>
+    <div id="container">
+    <h1>Registration Form</h1>
+    <label >Username</label>
+    <input type="text" id="uname"><br><br>
+    <label >Password</label>
+    <input type="password" id="pass"><br><br>
+    <div class="p">
+    <label >repassword</label>
+    <input type="password" id="cpass"><br><br></div>
+    <div>
+    <label >Age</label>
+    <input type="text" id="age"><br><br></div>
+    <label for="gender">Gender</label>
+    <input type="radio" name="gender">MALE
+    <input type="radio" name="gender">FEMALE<br><br>
+    <input type="button" value="submit"  id="sub" onclick="display()">
+    </div>
+</body>
+</center>
+</html>
